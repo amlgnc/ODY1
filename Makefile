@@ -1,10 +1,10 @@
 all: compile link run
 
 compile:
-	g++ -c src/main.cpp -Iinclude -o bin/main.o
+	g++ -c src/main.cpp -ISFML/include -o SFML/bin/main.o
 
 link:
-	g++ bin/main.o -o bin/main -Llib -lsfml-graphics -lsfml-window -lsfml-system
+	g++ SFML/bin/main.o -o SFML/bin/main -LSFML/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 run:
-	./bin/main
+	./SFML/bin/main

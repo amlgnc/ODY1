@@ -1,11 +1,10 @@
-#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "Yay!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::Window window(sf::VideoMode(800, 600), "ODY1");
 
+    // Main loop
     while (window.isOpen())
     {
         sf::Event event;
@@ -14,10 +13,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
     }
 
     return 0;
